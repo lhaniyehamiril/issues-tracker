@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
-import "./globals.css";
+
+import '@radix-ui/themes/styles.css'; 
+import "./globals.css"
+
+import { Theme } from "@radix-ui/themes";
 import Navbar from "./Navbar";
 
 const nunito = localFont({
@@ -23,9 +27,11 @@ export default function RootLayout({
       <body
         className={`${nunito.className} p-5 antialiased`}
       >
+      <Theme>
         <Navbar />
         <main>
         {children}</main>
+      </Theme>
       </body>
     </html>
   );
