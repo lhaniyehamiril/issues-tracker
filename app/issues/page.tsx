@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../component/Button'
 
 
+
 const IssuesPage = () => {
   return (
     <div>
