@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} p-5 antialiased`}
+        className={`${nunito.className} p-3 md:p-5 antialiased`}
       >
         <Navbar />
         <main>
