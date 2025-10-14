@@ -4,3 +4,18 @@
 @theme {
   --color-gray-main: #eee;
 }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+}
+
+
+.scroll-hidden::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  height: 0;
+}

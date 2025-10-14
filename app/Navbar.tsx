@@ -19,7 +19,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className='flex gap-5 pl-5 py-5 max-[15.5rem]:w-48 w-56 bg-[var(--color-gray-main)] shadow-md rounded-[1.7rem] items-center mt-2 mb-10'>
+    <nav className='flex gap-5 pl-5 py-5 max-[15.5rem]:w-48 w-56 bg-[var(--color-gray-main)] shadow-md rounded-[1.7rem] items-center mt-2'>
       <Link href="/"><FaBug className='w-5 h-5 fill-[#333]' /></Link>
       <ul className='flex gap-3 max-[15.5rem]:text-[13px]'>
        {links.map((link) => <Link href={link.href} key={link.label} 
