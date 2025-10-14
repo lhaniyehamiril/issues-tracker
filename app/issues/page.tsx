@@ -6,6 +6,7 @@ import prisma from '@/prisma/client'
 import Button from '../component/Button'
 import { FaBug } from 'react-icons/fa6'
 import { PiArrowBendRightDownBold } from "react-icons/pi";
+import IssueStatusBadge from '../component/IssueStatusBadge'
 
 
 const IssuesPage = async () => {
@@ -22,7 +23,7 @@ const IssuesPage = async () => {
         <div className='flex items-center gap-2'>
         <FaBug  color='#666'/> {issue.title} 
         </div>
-         <span className='text-[13px] text-gray-500'>{issue.status}</span> 
+         <span className='text-[11px] text-[#333] -mr-1'><IssueStatusBadge status={issue.status} /></span> 
        </li>
        ))}
      </ul>
