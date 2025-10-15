@@ -11,9 +11,9 @@ const statusMap : Record<Status ,
 }
 
 
-const IssueStatusBadge = ({status}: {status: Status}) => {
+const IssueStatusBadge = ({status , classname}: {status: Status , classname?: string}) => {
   return (
-    <div className='rounded-[0.85rem] px-3 py-2' style={{background : statusMap[status].bg , color: statusMap[status].color}}>
+    <div className={`rounded-[0.85rem] ${classname} px-3 py-2`} style={{background : statusMap[status].bg , color: statusMap[status].color}}>
       {statusMap[status].label}
     </div>
   )

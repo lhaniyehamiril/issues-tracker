@@ -21,7 +21,7 @@ const NewIssuePage = () => {
   }
 
   return ( 
-  <form onSubmit={handleSubmit(submit)}  className='flex items-center justify-center flex-col md:items-start md:justify-start'>
+  <form onSubmit={handleSubmit(submit)}  className='flex mt-10 items-center justify-center flex-col md:items-start md:justify-start'>
     <div className='bg-[var(--color-gray-main)] text-[#333] gap-5 rounded-3xl w-[93%] md:w-80 p-5 flex items-center justify-center flex-col'>
       <input {...register('title' , {required : 'Title'})} 
       placeholder={errors.title?.message  || 'Title'} className={` ${errors.title && " text-red-600 font-bold"} bg-white shadow-lg  shadow-[#fffefe] focus:outline-none w-[97%] rounded-[1.2rem] p-3`} />
