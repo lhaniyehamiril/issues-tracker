@@ -27,9 +27,9 @@ const IssueDetailPage = async ({params} : Prop) => {
          <span className='text-[12px] bg-white py-1 px-2 rounded-[0.75rem]'> {issue.createdAt.toDateString()}</span>
       </div>
       
-        <div className='flex mt-4 items-center gap-5  justify-between bg-white rounded-[1.5rem] p-3 shadow-2xl'>
+        <div className='flex mt-4  gap-5 items-center justify-between bg-white rounded-[1.5rem] p-3 shadow-2xl'>
         <p className='text-[14px]'> {issue.description}</p>
-        <IssueStatusBadge status={issue.status} classname='text-[13px] font-bold'/>
+        <IssueStatusBadge status={issue.status} classname='text-[13px] h-9 font-bold'/>
         </div>
 
     </div>
