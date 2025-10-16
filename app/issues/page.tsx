@@ -1,20 +1,17 @@
-import React from 'react'
-import delay from 'delay'
-import prisma from '@/prisma/client'
+import prisma from '@/prisma/client';
 import { PiArrowBendRightDownBold } from "react-icons/pi";
 import { RiLink } from "react-icons/ri";
 
 
-import IssueStatusBadge from '../component/IssueStatusBadge'
-import IssueAction from './IssueAction'
 import Link from 'next/link';
+import IssueStatusBadge from '../component/IssueStatusBadge';
+import IssueAction from './IssueAction';
 
 
 
 
 const IssuesPage = async () => {
   const issue = await prisma.issue.findMany()
-   await delay(3000)
 
   return (
   <div className='mt-6'>

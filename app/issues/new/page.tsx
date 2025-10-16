@@ -4,7 +4,7 @@ import Button from '@/app/component/Button'
 import Spinner from '@/app/component/Spinner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import {useForm} from "react-hook-form"
+import { useForm } from "react-hook-form"
 
 interface issueForm {
   title: string
