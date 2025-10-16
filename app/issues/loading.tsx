@@ -1,6 +1,5 @@
 import { PiArrowBendRightDownBold } from "react-icons/pi";
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
+import {Skeleton , SkeletonTheme} from '@/app/component'
 import IssueAction from './IssueAction';
 
 const LoadingIssuesPage = () => {

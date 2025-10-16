@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../component/Button'
+import {Button }from '@/app/component'
 import Link from 'next/link'
 
 const IssueAction = () => {
