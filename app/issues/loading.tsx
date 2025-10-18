@@ -1,8 +1,17 @@
+'use client'
+
 import { PiArrowBendRightDownBold } from "react-icons/pi";
 import {Skeleton , SkeletonTheme} from '@/app/component'
 import IssueAction from './IssueAction';
+import { usePathname } from "next/navigation";
 
 const LoadingIssuesPage = () => {
+
+   const pathname = usePathname();
+
+   if (pathname.match(/^\/issues\/(new|[0-9a-zA-Z_-]+)/))
+     return null
+       
   const issues = [1, 2, 3, 4];
 
   return (
