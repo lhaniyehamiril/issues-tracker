@@ -19,6 +19,9 @@ const IssueForm = ({issue} : {issue?: Issue}) => {
   const router = useRouter()
   
   const submit = async(data : issueForm) => {
+     if(issue) 
+     await axios.patch(`/api/issues/${issue.id}` , data)
+     else
       await axios.post('/api/issues' , data)
       router.push('/issues')
   }
@@ -33,7 +36,13 @@ const IssueForm = ({issue} : {issue?: Issue}) => {
       {...register('description' , {required: 'Description'})}
        placeholder={errors.description?.message  || 'Description'}  className={` ${errors.description && " text-red-600 font-bold"} bg-white shadow-lg shadow-white focus:outline-none w-[96%] p-3 rounded-[1.2rem]`}/>
     </div> 
-      <Button className='mt-3 w-48'> {isSubmitting ? <Spinner /> : <span>submit new issue</span> }  </Button>  
+      <Button className='mt-3 w-48'>
+         {isSubmitting ?
+         <Spinner /> :
+         issue ? 'Update Issue' : 'submit new issue'
+         
+        }
+       </Button>  
     </form>
 
   )
