@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 
 import EditIssue from './EditIssue'
 import IssueDetail from './IssueDetail'
+import DeleteIssueButton from './DeleteIssueButton'
 
 
 interface Prop {
@@ -23,8 +24,9 @@ const IssueDetailPage = async ({params} : Prop) => {
   return (
     <div className='flex items-center justify-center flex-col gap-3'> 
     <div className='bg-[#eee] mt-10 rounded-3xl relative p-5 w-[95%] md:w-80 '>
-      <EditIssue id={issue.id} />
-       <IssueDetail issue={issue} />
+        <EditIssue id={issue.id} />
+        <DeleteIssueButton issueId={issue.id} />
+        <IssueDetail issue={issue} />
     </div>
     </div>
   )
