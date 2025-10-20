@@ -1,13 +1,9 @@
 'use client'
 
 import {Skeleton ,SkeletonTheme } from '@/app/component'
-import { usePathname } from 'next/navigation'
 
 const LoadingIssueDetailPage = () => {
 
-  const pathname = usePathname()
-   if(pathname.includes('/edit')) return null
-   
   return (
     <div className='flex items-center justify-center'> 
       <div className='bg-[#eee] mt-10 rounded-3xl p-5 w-[95%] md:w-80'>

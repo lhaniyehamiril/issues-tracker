@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
 import IconTrash from "./IconTrash"
 
+
 const DeleteIssueButton = ({issueId}: {issueId: number}) => {
   const router = useRouter()
+
 
 
   const deleteIssue = async ()=> {

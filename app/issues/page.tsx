@@ -23,7 +23,7 @@ const IssuesPage = async () => {
      {issue.map((issue) => (
        <li key={issue.id} className="bg-white shadow-lg  shadow-white rounded-[1.3rem] flex items-center py-3 px-[10px] w-[96%] gap-2 justify-between mb-3">
           <Link href={`/issues/${issue.id}`} className='flex items-center gap-1'> <RiLink color='#7c86e0' /> {issue.title} </Link> 
-         <span className='text-[11px] font-bold'><IssueStatusBadge status={issue.status} /></span> 
+          <span className='text-[11px] font-bold'><IssueStatusBadge status={issue.status} /></span> 
          </li>
        ))}
      </ul>
