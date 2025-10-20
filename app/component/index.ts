@@ -1,5 +1,6 @@
 export {default as Button } from './Button' 
 export {default as IssueStatusBadge } from './IssueStatusBadge' 
-export {default as Spinner } from './Spinner' 
+export {default as Spinner } from './Spinner'
+ export {default as CustomToaster } from './CustomToaster' 
 export {default as Skeleton } from './Skeleton' 
 export { SkeletonTheme } from './Skeleton'

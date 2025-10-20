@@ -4,7 +4,7 @@ import { RiLink } from "react-icons/ri";
 
 
 import Link from 'next/link';
-import IssueStatusBadge from '../component/IssueStatusBadge';
+import {IssueStatusBadge }from '@/app/component';
 import IssueAction from './IssueAction';
 
 

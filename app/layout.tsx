@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import "./globals.css";
 
 import Navbar from "./Navbar";
+import {CustomToaster} from '@/app/component';
 
 const nunito = localFont({
   src: "./font/Nunito.ttf",
@@ -27,7 +28,9 @@ export default function RootLayout({
       >
         <Navbar />
         <main>
-        {children}</main>
+        {children}
+        </main>
+        <CustomToaster />
       </body>
     </html>
   );
