@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@prisma/client": "^5.3.1",
+    "@auth/prisma-adapter": "^2.11.1",
+    "@prisma/client": "^5.22.0",
+    "@prisma/extension-accelerate": "^2.0.2",
     "axios": "^1.12.2",
     "classnames": "^2.5.1",
     "delay": "^6.0.0",
