@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Navbar from "./Navbar";
 import {CustomToaster} from '@/app/component';
+import AuthProvider from "./auth/Provider";
 
 const nunito = localFont({
   src: "./font/Nunito.ttf",
@@ -26,10 +27,12 @@ export default function RootLayout({
       <body
         className={`${nunito.className} p-3 md:p-5 antialiased`}
       >
-        <Navbar />
-        <main>
-        {children}
+       <AuthProvider>
+         <Navbar />
+         <main>
+          {children}
         </main>
+       </AuthProvider>
         <CustomToaster />
       </body>
     </html>
