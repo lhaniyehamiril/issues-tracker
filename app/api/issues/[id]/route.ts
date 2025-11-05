@@ -8,15 +8,19 @@ const IssueSchema = z.object({
 })
 
 export async function PATCH
-(request:NextRequest , {params} : {params: {id: string}}) {
+(request:NextRequest , {params} : {params: Promise<{id: string}> }) {   
+
 const body = await request.json();
 const validation = IssueSchema.safeParse(body)
+
 if(!validation.success) 
     return NextResponse.json(validation.error.format() , {status: 400})
-  
- const issue = await prisma.issue.findUnique({
-    where: {id: parseInt(params.id)}
- })
+
+   const {id} = await params;
+   const issueId = parseInt(id)
+   const issue = await prisma.issue.findUnique({
+    where: {id: issueId}
+   })
  
  if(!issue) return NextResponse.json({error: 'Invalid issue'} , {status: 404})
 
@@ -34,10 +38,13 @@ if(!validation.success)
 
 export async function DELETE
 ( request:NextRequest,
-  {params} : {params: {id: string}}) {
+  {params} : {params: Promise<{id: string}>}) {
+
+    const {id} = await params
+    const issueId = parseInt(id)
  
  const issue = await prisma.issue.findUnique({
-    where: {id: parseInt(params.id)}
+    where: {id:  issueId}
   })
   
   if(!issue) return NextResponse.json({error: 'Invalid Issue'} , {status: 404})

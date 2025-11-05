@@ -25,7 +25,7 @@ const {status, data: session} = useSession()
   return (
     <header className='flex mt-2 items-center gap-3'>
      <nav className='flex gap-5 px-5 h-14 justify-center bg-[var(--color-gray-main)] shadow-md rounded-[1.7rem] items-center '> 
-       <Link href="/"><FaBug className='w-6 h-6 -ml-1 fill-[#81502a]' /></Link>
+       <Link href="/"><FaBug className='w-6 h-6 -ml-1 fill-[#444]' /></Link>
       <ul className='flex gap-3 max-[15.5rem]:text-[13px]'>
        {links.map((link) => 
        <li key={link.label} >
@@ -50,8 +50,8 @@ const {status, data: session} = useSession()
           }
           
         {status === 'unauthenticated' && 
-         <Button className='w-12 h-8 -mt-4 flex relative rounded-full justify-center'>
-           <Link className='absolute -bottom-2' href='/api/auth/signin'><FaUser color='#444' size={28}/></Link>
+         <Button className='w-12 h-3 -mt-2 flex relative rounded-full justify-center'>
+           <Link className='absolute -bottom-1' href='/api/auth/signin'><FaUser color='#444' size={23}/></Link>
          </Button>
         }
   </header>
